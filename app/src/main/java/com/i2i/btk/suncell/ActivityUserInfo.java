@@ -17,7 +17,7 @@ public class ActivityUserInfo extends AppCompatActivity {
     private RecyclerView recyclerViewPackets;
     private UserPacketsAdapter userPacketsAdapter;
     RecyclerView.LayoutManager  layoutManager;
-    private List<UserPacketModel> userPacketList;
+    private List<UserPacketInfoModel> userPacketList;
     private ProgressBar progressBar;
     private TextView progressText;
     @Override
@@ -29,9 +29,9 @@ public class ActivityUserInfo extends AppCompatActivity {
     }
     private void initComponents() {
         userPacketList=new ArrayList<>();
-        userPacketList.add(new UserPacketModel("DATA",1000,250));
-        userPacketList.add(new UserPacketModel("VOICE",1000,100));
-        userPacketList.add(new UserPacketModel("SMS",1000,453));
+        userPacketList.add(new UserPacketInfoModel("DATA",1000,250));
+        userPacketList.add(new UserPacketInfoModel("VOICE",1000,100));
+        userPacketList.add(new UserPacketInfoModel("SMS",1000,453));
         layoutManager=new LinearLayoutManager(this);
         recyclerViewPackets=findViewById(R.id.recylerViewPackets);
         recyclerViewPackets.setLayoutManager(layoutManager);
