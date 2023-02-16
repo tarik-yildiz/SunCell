@@ -32,10 +32,9 @@ public class ActivitySignIn extends AppCompatActivity {
         constraintLayoutLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String msg=editTextPassword.getText().toString()+editTextPhoneNumber.getText().toString();
-                //   login();
-                //    Toast.makeText(LoginScreen.this,"Login success"+ msg, Toast.LENGTH_SHORT).show();
-              //  loginSuccess();
+                String phone=editTextPhoneNumber.getText().toString();
+                String password=editTextPassword.getText().toString();
+                loginSuccess();
             }
         });
         textViewRegister.setOnClickListener(new View.OnClickListener() {
@@ -56,8 +55,8 @@ public class ActivitySignIn extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
     private void loginSuccess(){
-    //    Intent intent=new Intent(ActivitySignIn .this,UserInfoActivity.class);
-    //    startActivity(intent);
+        Intent intent=new Intent(ActivitySignIn .this,ActivityUserInfo.class);
+        startActivity(intent);
     }
 
 }
